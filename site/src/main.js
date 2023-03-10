@@ -1,9 +1,11 @@
 var removeItem = document.getElementsByClassName('item-btn-remove')
+console.log(removeItem);
 
-for (var index = 0; index < removeItem.length; index++) {
-    var button = removeItem[index]
+console.log(removeItem[1]);
+for (var i = 0; i < removeItem.length; i++) {
+    var button = removeItem[i]
     button.addEventListener('click' , function() {
-        console.log('clicked')
+        console.log('button')
     }) 
     
 }
