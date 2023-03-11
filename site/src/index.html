@@ -5,23 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="main.js"></script>
+    <script src="main.js" async ></script> 
 </head>
 <body>
-    <div class="item">
-        <p class="item -tag"> Name of the product</p>
-        <p class="item -price"> $99</p> 
-        <button class="item-btn-remove" type="button"> Remove</button>
-    </div>
-    <div class="item">
-        <p class="item -tag"> Name of the product</p>
-        <p class="item -price"> $123</p> 
-        <button class="item-btn-remove" type="button"> Remove</button>
-    </div>
-    <div class="item">
-        <p class="item -tag"> Name of the product</p>
-        <p class="item -price"> $420</p> 
-        <button class="item-btn-remove" type="button"> Remove</button>
-    </div>
+    <p> Cart</p>
+    <table> 
+        <tr>
+            <td>
+                <p class="name"> merch </p>
+                <p class="price"> 99.99$</p>
+            </td>
+            <td> 
+                <form action="" method="GET">
+                    <input type="button" class="btn" value="Remove"/>
+                </form>    
+            </td>
+            <td>
+                <input type="number" class="quantity" value="0"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="name"> newa.album </p>
+                <p class="price"> 10.0$</p>
+            </td>
+            <td> 
+                <form action="" method="GET">
+                    <input type="button" class="btn" value="Remove"/>
+                </form>    
+            </td>
+            <td>
+                <input type="number" class="quantity" value="0"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="name"> tickets </p>
+                <p class="proice"> 5.0$</p>
+            </td>
+            <td> 
+                <form action="" method="GET">
+                    <input type="button" class="btn" value="Remove"/>
+                </form>    
+            </td>
+            <td>
+                <input type="number" class="quantity" value="0"/>
+            </td>
+        </tr>
+    </table>
+    
+
+    
+
+    
+    
+
 </body>
 </html>

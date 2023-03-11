@@ -1,11 +1,13 @@
-var removeItem = document.getElementsByClassName('item-btn-remove')
-console.log(removeItem);
+var itemButton = document.getElementsByClassName("btn")
+for(var i = 0; i < itemButton.length; i++){
+    var button = itemButton[i]
+    button.addEventListener("click", function(event){
+        var buttonClicked = event.target
+        buttonClicked.parentElement.parentElement.parentElement.remove()
+        updateTotal()
+    })
+}
 
-console.log(removeItem[1]);
-for (var i = 0; i < removeItem.length; i++) {
-    var button = removeItem[i]
-    button.addEventListener('click' , function() {
-        console.log('button')
-    }) 
-    
+const updateTotal = () => {
+    console.log("Hello worlds");
 }
