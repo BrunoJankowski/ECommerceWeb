@@ -9,5 +9,12 @@ for(var i = 0; i < itemButton.length; i++){
 }
 
 const updateTotal = () => {
-    console.log("Hello worlds");
+    var total = 0.0
+    var priceItem = document.getElementsByClassName('price')
+    for(var i = 0; i < priceItem.length; i++){
+        var price = priceItem[i]
+        console.log(price)
+    }
+
+
 }
