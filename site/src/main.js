@@ -4,17 +4,16 @@ for(var i = 0; i < itemButton.length; i++){
     button.addEventListener("click", function(event){
         var buttonClicked = event.target
         buttonClicked.parentElement.parentElement.parentElement.remove()
-        updateTotal()
+        updateTotal(i)
     })
 }
 
-const updateTotal = () => {
-    var total = 0.0
+function updateTotal (index){
+    console.log(index);
     var priceItem = document.getElementsByClassName('price')
-    for(var i = 0; i < priceItem.length; i++){
-        var price = priceItem[i]
-        console.log(price)
-    }
+    var price = priceItem[index]
+    console.log(price.innerText);
+        
 
 
 }
