@@ -21,13 +21,21 @@ document.getElementById("total").innerHTML = "Total: $" + total.toFixed(2); //se
 
 for(var i = 0; i < itemButtonRemove.length; i++){
     var button_remove = itemButtonRemove[i]
+    var button_submit = itemButtonSubmit[i]
     button_remove.setAttribute("data-index", i)
+    button_submit.setAttribute("data-index", i)
     button_remove.addEventListener("click", function(event){
         var buttonClicked = event.target
         var index = buttonClicked.getAttribute("data-index") // retrieve index from data attribute
         console.log(index);
-        updateTotalRemove(index, prices)
+        updateTotalRemove(index, prices, quantities)
         buttonClicked.parentElement.parentElement.parentElement.remove()
+    })
+    button_submit.addEventListener("click", function(event){
+        var buttonClickedSub = event.target
+        var index = buttonClickedSub.getAttribute("data-index") // retrieve index from data attribute
+        
+        updateTotalAdd(index, prices)
     })
 }
 
@@ -41,3 +49,18 @@ function updateTotalRemove (index, prices){
     console.log(total);
 
 }
+
+function updateTotalAdd (index, prices){
+    var price = prices[index]
+    total += parseFloat(price)
+
+    var quantities_value = quantities[index]
+    quantities_value++;
+    quantities[index]++;
+    quantityItem[index].value = quantities_value
+    document.getElementById("total").innerHTML = "Total: $ " + total.toFixed(2) // updates total to 2nd number after . 
+    console.log(price);
+    console.log(total);
+
+}
+
