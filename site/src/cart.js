@@ -67,6 +67,7 @@ for(var i = 0; i < itemButtonRemove.length; i++){
     })
 }
 
+
 function updateTotalRemove (index, prices){
     var price = prices[index]
     var quantity = quantities[index]
@@ -75,6 +76,7 @@ function updateTotalRemove (index, prices){
     document.getElementById("total").innerHTML = "Total: $" + total.toFixed(2) // updates total to 2nd number after . 
     console.log(price);
     console.log(total);
+    checkTotal()
 
 }
 
@@ -93,7 +95,6 @@ function updateTotalPlus (index, prices){
 
 function updateTotalMinus (index, prices, buttonClicked){
     var price = prices[index]
-
     if(quantityItem[index].value > 0){
         total -= parseFloat(price)
         var quantities_value = quantities[index]
@@ -106,5 +107,14 @@ function updateTotalMinus (index, prices, buttonClicked){
     else{
         console.log("ITS 0");
     }
+    checkTotal()
 
+}
+
+function checkTotal() {
+    console.log(total);
+    var check_button = document.getElementsByClassName('checkout')
+    if(total == 0){
+        check_button[0].setAttribute('disabled', true)
+    }
 }
