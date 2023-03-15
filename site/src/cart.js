@@ -10,29 +10,31 @@ var quantities = []
 
 var item_names = localStorage.getItem('names')
 var item_price = localStorage.getItem('prices')
-item_names = item_names.split(',')
-item_price = item_price.split(',')
-console.log(item_names);
-console.log(item_price);
 
 var quantityItem = document.getElementsByClassName('quantity')
 
+if(item_names !== null){
+    item_names = item_names.split(',')
+    item_price = item_price.split(',')
 
-for (var i = 0; i < itemName.length; i++) {
-    itemName[i].innerText = item_names[i]
-  }
+    for (var i = 0; i < itemName.length; i++) {
+        itemName[i].innerText = item_names[i]
+      }
+    
+    for (var i = 0; i < itemName.length; i++) {
+        itemPrice[i].innerText = item_price[i]
+    }
 
-for (var i = 0; i < itemName.length; i++) {
-    itemPrice[i].innerText = item_price[i]
+    for (var i = 0; i < item_price.length; i++) {
+        prices.push(item_price[i])
+        quantities.push(quantityItem[i].value)
+        total += parseFloat(prices[i] * quantities[i])
+      }
 }
 
+console.log(item_names);
+console.log(item_price);
 
-
-for (var i = 0; i < item_price.length; i++) {
-    prices.push(item_price[i])
-    quantities.push(quantityItem[i].value)
-    total += parseFloat(prices[i] * quantities[i])
-  }
 
 document.getElementById("total").innerHTML = "Total: $" + total.toFixed(2); //sets a p to total
 
