@@ -1,16 +1,35 @@
 var itemButtonRemove = document.getElementsByClassName("btn")
 var itemButtonPlus = document.getElementsByClassName("plus")
 var itemButtonMinus = document.getElementsByClassName("minus")
-
-var priceItem = document.getElementsByClassName('price')
-var quantityItem = document.getElementsByClassName('quantity')
+var itemName = document.getElementsByClassName("name")
+var itemPrice = document.getElementsByClassName("price")
 
 var total = 0
 var prices = []
 var quantities = []
 
-for (var i = 0; i < priceItem.length; i++) {
-    prices.push(priceItem[i].innerHTML)
+var item_names = localStorage.getItem('names')
+var item_price = localStorage.getItem('prices')
+item_names = item_names.split(',')
+item_price = item_price.split(',')
+console.log(item_names);
+console.log(item_price);
+
+var quantityItem = document.getElementsByClassName('quantity')
+
+
+for (var i = 0; i < itemName.length; i++) {
+    itemName[i].innerText = item_names[i]
+  }
+
+for (var i = 0; i < itemName.length; i++) {
+    itemPrice[i].innerText = item_price[i]
+}
+
+
+
+for (var i = 0; i < item_price.length; i++) {
+    prices.push(item_price[i])
     quantities.push(quantityItem[i].value)
     total += parseFloat(prices[i] * quantities[i])
   }

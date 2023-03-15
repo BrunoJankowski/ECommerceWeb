@@ -1,121 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
-    <script src="main.js" async ></script> 
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+    <script type="module" src="cart.js" async></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
     <nav>
-        <p> Cart </p> 
-        <a href="shop.html"> Shop</a>
-        <a href="#"> Conntact</a>
+      <p>Cart</p>
+      <a href="shop.html"> Shop</a>
+      <a href="#"> Conntact</a>
     </nav>
     <div class="container">
+      <div class="item">
+        <table>
+          <tr>
+            <td>
+              <p class="name">merch</p>
+              <p class="price">100.0</p>
+            </td>
+            <td>
+              <form action="" method="GET">
+                <input type="button" class="btn" value="Remove" />
+              </form>
+            </td>
+            <td>
+              <input type="number" class="quantity" value="1" />
+            </td>
+            <td>
+              <form action="" method="GET">
+                <input type="button" class="plus" value="+" />
+              </form>
+            </td>
+            <td>
+              <form action="" method="GET">
+                <input type="button" class="minus" value="-" />
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="name">newa.album</p>
+              <p class="price">10.0</p>
+            </td>
+            <td>
+              <form action="" method="GET">
+                <input type="button" class="btn" value="Remove" />
+              </form>
+            </td>
+            <td>
+              <input type="number" class="quantity" value="1" />
+            </td>
+            <td>
+              <form action="" method="GET">
+                <input type="button" class="plus" value="+" />
+              </form>
+            </td>
+            <td>
+              <form action="" method="GET">
+                <input type="button" class="minus" value="-" />
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="name">tickets</p>
+              <p class="price">5.0</p>
+            </td>
+            <td>
+              <form action="" method="GET">
+                <input type="button" class="btn" value="Remove" />
+              </form>
+            </td>
+            <td>
+              <input type="number" class="quantity" value="1" />
+            </td>
+            <td>
+              <form action="" method="GET">
+                <input type="button" class="plus" value="+" />
+              </form>
+            </td>
+            <td>
+              <form action="" method="GET">
+                <input type="button" class="minus" value="-" />
+              </form>
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td>
+              <p id="total"></p>
+            </td>
 
-        <div class="item">
-            <table> 
-                <tr>
-                    <td>
-                        <p class="name"> merch </p>
-                        <p class="price">100.0</p>
-                    </td>
-                    <td> 
-                        <form action="" method="GET">
-                            <input type="button" class="btn" value="Remove"/>
-                        </form>    
-                    </td>
-                    <td>
-                        <input type="number" class="quantity" value="2"/>
-                    </td>
-                    <td>
-                        <form action="" method="GET">
-                            <input type="button" class="plus" value="+"/>
-                        </form>  
-                    </td>
-                    <td>
-                        <form action="" method="GET">
-                            <input type="button" class="minus" value="-"/>
-                        </form>  
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="name"> newa.album </p>
-                        <p class="price">10.0</p>
-                    </td>
-                    <td> 
-                        <form action="" method="GET">
-                            <input type="button" class="btn" value="Remove"/>
-                        </form>    
-                    </td>
-                    <td>
-                        <input type="number" class="quantity" value="6"/>
-                    </td>
-                    <td>
-                        <form action="" method="GET">
-                            <input type="button" class="plus" value="+"/>
-                        </form>  
-                    </td>
-                    <td>
-                        <form action="" method="GET">
-                            <input type="button" class="minus" value="-"/>
-                        </form>  
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p class="name"> tickets </p>
-                        <p class="price">5.0</p>
-                    </td>
-                    <td> 
-                        <form action="" method="GET">
-                            <input type="button" class="btn" value="Remove"/>
-                        </form>    
-                    </td>
-                    <td>
-                        <input type="number" class="quantity" value="1"/>
-                    </td>
-                    <td>
-                        <form action="" method="GET">
-                            <input type="button" class="plus" value="+"/>
-                        </form>  
-                    </td>
-                    <td>
-                        <form action="" method="GET">
-                            <input type="button" class="minus" value="-"/>
-                        </form>  
-                    </td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td>
-                        <p id="total"></p>
-                    </td>
-            
-                    <td>
-                        <form action="" method="GET">
-                            <button type="button" class="checkout" onclick="window.location.href='checkout.html'">Checkout</button>
-                        </form>  
-                    </td>
-                </tr>
-        
-            </table>
-            
-        </div>
-        <div class="item">
-            <img src="mononoke.jpeg">
-        </div>
+            <td>
+              <form action="" method="GET">
+                <button
+                  type="button"
+                  class="checkout"
+                  onclick="window.location.href='checkout.html'"
+                >
+                  Checkout
+                </button>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="item">
+        <img src="mononoke.jpeg" />
+      </div>
     </div>
-
-    
-
-    
-    
-
-</body>
+    <p class="stored"></p>
+  </body>
 </html>
