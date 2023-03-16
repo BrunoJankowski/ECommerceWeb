@@ -4,6 +4,7 @@ var itemPrice = document.getElementsByClassName('item-price')
 
 var names = []
 var prices = []
+
 console.log(itemButtonAdd);
 console.log(itemName);
 

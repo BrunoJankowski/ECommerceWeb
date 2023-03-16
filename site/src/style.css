@@ -9,7 +9,7 @@
 .container-shop {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: rgb(171, 182, 212);
+    border: 4px solid red;
 
 }
 
@@ -27,6 +27,7 @@
 .item-shop {
     border: 4px solid black;
     width: 33vw;
+    background-color: rgb(171, 182, 212);
 
 }
 

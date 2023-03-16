@@ -13,18 +13,27 @@ var item_price = localStorage.getItem('prices')
 
 var quantityItem = document.getElementsByClassName('quantity')
 
+
+
 if(item_names !== null){
     item_names = item_names.split(',')
     item_price = item_price.split(',')
 
     for (var i = 0; i < itemName.length; i++) {
-        itemName[i].innerText = item_names[i]
+        
+        if(item_names[i] != undefined){
+            itemName[i].innerText = item_names[i]
+            itemPrice[i].innerText = item_price[i]
+        }
+        else{
+            itemButtonMinus[i].setAttribute('hidden', true)
+            itemButtonPlus[i].setAttribute('hidden', true)
+            itemButtonRemove[i].setAttribute('hidden', true)
+            quantityItem[i].setAttribute('hidden', true)
+        }
+        
       }
     
-    for (var i = 0; i < itemName.length; i++) {
-        itemPrice[i].innerText = item_price[i]
-    }
-
     for (var i = 0; i < item_price.length; i++) {
         prices.push(item_price[i])
         quantities.push(quantityItem[i].value)
@@ -114,7 +123,8 @@ function updateTotalMinus (index, prices, buttonClicked){
 function checkTotal() {
     console.log(total);
     var check_button = document.getElementsByClassName('checkout')
-    if(total == 0){
+    if(total <= 0){
         check_button[0].setAttribute('disabled', true)
     }
+    
 }
